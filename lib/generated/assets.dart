@@ -6,6 +6,11 @@ class Assets {
   static const String fontsRalewayExtraLight = 'assets/fonts/Raleway-ExtraLight.ttf';
   static const String fontsRalewaySemiBold = 'assets/fonts/Raleway-SemiBold.ttf';
   static const String fontsRalewayThin = 'assets/fonts/Raleway-Thin.ttf';
+  static const String imagesIcAddWhite = 'assets/images/ic_add_white.png';
+  static const String imagesIcChatBubbleWhite = 'assets/images/ic_chat_bubble_white.png';
+  static const String imagesIcHomeWhite = 'assets/images/ic_home_white.png';
+  static const String imagesIcSearchWhite = 'assets/images/ic_search_white.png';
+  static const String imagesIcSettingsWhite = 'assets/images/ic_settings_white.png';
   static const String imagesIcUserWhite = 'assets/images/ic_user_white.png';
 
 }
