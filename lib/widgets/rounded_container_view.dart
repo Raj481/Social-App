@@ -9,26 +9,23 @@ class RoundedContainerView extends StatelessWidget {
   final EdgeInsets? padding ;
   final EdgeInsets? margin ;
   final BoxDecoration? boxDecoration ;
+  final BoxConstraints? constraints ;
   const RoundedContainerView({
     super.key,
     this.child,
     this.padding,
     this.margin,
-    this.boxDecoration
+    this.boxDecoration,
+    this.constraints
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: padding ?? const EdgeInsets.symmetric(
-          horizontal: 25,
-          vertical: 8
-      ),
-      constraints: const BoxConstraints(
-        minWidth: 200
-      ),
+      padding: padding ?? EdgeInsets.zero,
+      constraints: constraints ?? const BoxConstraints(),
       margin: margin ?? EdgeInsets.zero,
-      decoration: boxDecoration ??  BoxDecoration(
+      decoration: boxDecoration ?? BoxDecoration(
           color: ColorRes.white,
           borderRadius: BorderRadius.circular(25)
       ),

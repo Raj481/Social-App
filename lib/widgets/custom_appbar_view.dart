@@ -17,7 +17,7 @@ class CustomAppBarView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(
-          left: 15, right: 15,
+          left: 18, right: 18,
           top: 45, bottom: 15
       ),
       decoration: BoxDecoration(

@@ -6,6 +6,8 @@ class Assets {
   static const String fontsRalewayExtraLight = 'assets/fonts/Raleway-ExtraLight.ttf';
   static const String fontsRalewaySemiBold = 'assets/fonts/Raleway-SemiBold.ttf';
   static const String fontsRalewayThin = 'assets/fonts/Raleway-Thin.ttf';
+  static const String fontsRobotoMedium = 'assets/fonts/Roboto-Medium.ttf';
+  static const String fontsRobotoRegular = 'assets/fonts/Roboto-Regular.ttf';
   static const String imagesIcAddBlack = 'assets/images/ic_add_black.png';
   static const String imagesIcAddImageBlack = 'assets/images/ic_add_image_black.png';
   static const String imagesIcAddImageWhite = 'assets/images/ic_add_image_white.png';

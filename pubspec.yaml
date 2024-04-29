@@ -39,7 +39,14 @@ flutter:
     - family: RalewaySemiBold
       fonts:
         - asset: assets/fonts/Raleway-SemiBold.ttf
+          weight: 300
     - family: OpenSansLight
       fonts:
         - asset: assets/fonts/OpenSans-Light.ttf
+    - family: RobotoMedium
+      fonts:
+        - asset: assets/fonts/Roboto-Medium.ttf
+    - family: RobotoRegular
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
 
