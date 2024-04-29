@@ -21,7 +21,7 @@ class HomeAppBarView extends StatelessWidget {
         color: ColorRes.secondaryBlack.withOpacity(.1)
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             StringRes.appName,
@@ -32,7 +32,7 @@ class HomeAppBarView extends StatelessWidget {
             ),
           ),
 
-          Row(
+          /*Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               Image(
@@ -42,7 +42,7 @@ class HomeAppBarView extends StatelessWidget {
                   height: 21,
               )
             ],
-          )
+          )*/
         ],
       ),
     );
