@@ -14,7 +14,7 @@ class HomeBottomAppBarView extends StatelessWidget {
         minHeight: 65
       ),
       padding: const EdgeInsets.only(
-          left: 25, right: 25,
+          left: 15, right: 15,
           top: 15, bottom: 15
       ),
       decoration: BoxDecoration(
@@ -25,47 +25,67 @@ class HomeBottomAppBarView extends StatelessWidget {
         children: [
           InkWell(
             onTap: (){},
-            child: Image(
-              image: AssetImage(
-                  ImageRes.icHomeWhite
+            borderRadius: BorderRadius.circular(15),
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Image(
+                image: AssetImage(
+                    ImageRes.icHomeWhite
+                ),
+                height: 24,
               ),
-              height: 21,
             ),
           ),
           InkWell(
             onTap: (){},
-            child: Image(
-              image: AssetImage(
-                  ImageRes.icChatBubbleWhite
+            borderRadius: BorderRadius.circular(15),
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Image(
+                image: AssetImage(
+                    ImageRes.icChatBubbleWhite
+                ),
+                height: 24,
               ),
-              height: 21,
             ),
           ),
           InkWell(
             onTap: (){},
-            child: Image(
-              image: AssetImage(
-                  ImageRes.icAddWhite
+            borderRadius: BorderRadius.circular(15),
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Image(
+                image: AssetImage(
+                    ImageRes.icAddWhite
+                ),
+                height: 24,
               ),
-              height: 21,
             ),
           ),
           InkWell(
             onTap: (){},
-            child: Image(
-              image: AssetImage(
-                  ImageRes.icSearchWhite
+            borderRadius: BorderRadius.circular(15),
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Image(
+                image: AssetImage(
+                    ImageRes.icSearchWhite
+                ),
+                height: 24,
               ),
-              height: 21,
             ),
           ),
           InkWell(
             onTap: (){},
-            child: Image(
-              image: AssetImage(
-                  ImageRes.icSettingsWhite
+            borderRadius: BorderRadius.circular(15),
+            child: Padding(
+              padding: const EdgeInsets.all(12),
+              child: Image(
+                image: AssetImage(
+                    ImageRes.icSettingsWhite
+                ),
+                height: 24,
               ),
-              height: 21,
             ),
           ),
         ],
