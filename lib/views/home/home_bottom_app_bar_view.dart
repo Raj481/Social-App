@@ -23,35 +23,50 @@ class HomeBottomAppBarView extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image(
-            image: AssetImage(
-                ImageRes.icHomeWhite
+          InkWell(
+            onTap: (){},
+            child: Image(
+              image: AssetImage(
+                  ImageRes.icHomeWhite
+              ),
+              height: 21,
             ),
-            height: 21,
           ),
-          Image(
-            image: AssetImage(
-                ImageRes.icChatBubbleWhite
+          InkWell(
+            onTap: (){},
+            child: Image(
+              image: AssetImage(
+                  ImageRes.icChatBubbleWhite
+              ),
+              height: 21,
             ),
-            height: 21,
           ),
-          Image(
-            image: AssetImage(
-                ImageRes.icAddWhite
+          InkWell(
+            onTap: (){},
+            child: Image(
+              image: AssetImage(
+                  ImageRes.icAddWhite
+              ),
+              height: 21,
             ),
-            height: 21,
           ),
-          Image(
-            image: AssetImage(
-                ImageRes.icSearchWhite
+          InkWell(
+            onTap: (){},
+            child: Image(
+              image: AssetImage(
+                  ImageRes.icSearchWhite
+              ),
+              height: 21,
             ),
-            height: 21,
           ),
-          Image(
-            image: AssetImage(
-                ImageRes.icSettingsWhite
+          InkWell(
+            onTap: (){},
+            child: Image(
+              image: AssetImage(
+                  ImageRes.icSettingsWhite
+              ),
+              height: 21,
             ),
-            height: 21,
           ),
         ],
       ),
