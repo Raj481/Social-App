@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 // import custom package
 import '../../utils/color_res.dart';
 import 'home_app_bar_view.dart';
+import 'home_bottom_app_bar_view.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -24,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
           HomeAppBarView()
         ],
       ),
+      bottomNavigationBar: const HomeBottomAppBarView(),
     );
   }
 }

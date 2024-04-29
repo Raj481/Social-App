@@ -35,7 +35,6 @@ class HomeAppBarView extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-
               Image(
                   image: AssetImage(
                     ImageRes.icUserWhite
