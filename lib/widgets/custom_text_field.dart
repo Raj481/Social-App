@@ -30,7 +30,7 @@ class CustomTextField extends StatelessWidget {
           horizontal: 15
         ),
         decoration: boxDecoration ?? BoxDecoration(
-          color: ColorRes.brownMedium.withOpacity(.3),
+          color: ColorRes.white.withOpacity(.3),
           borderRadius: BorderRadius.circular(15)
         ),
         child: TextField(
