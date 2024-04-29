@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:socialapp/utils/image_res.dart';
 
 // import custom package
 import '../../utils/color_res.dart';
@@ -34,9 +35,12 @@ class HomeAppBarView extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(
-                  Icons.person_4_rounded,
-                  color: ColorRes.white,
+
+              Image(
+                  image: AssetImage(
+                    ImageRes.icUserWhite
+                  ),
+                  height: 21,
               )
             ],
           )
