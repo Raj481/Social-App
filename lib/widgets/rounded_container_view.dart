@@ -24,7 +24,7 @@ class RoundedContainerView extends StatelessWidget {
           horizontal: 25,
           vertical: 8
       ),
-      constraints: BoxConstraints(
+      constraints: const BoxConstraints(
         minWidth: 200
       ),
       margin: margin ?? EdgeInsets.zero,

@@ -6,11 +6,26 @@ class Assets {
   static const String fontsRalewayExtraLight = 'assets/fonts/Raleway-ExtraLight.ttf';
   static const String fontsRalewaySemiBold = 'assets/fonts/Raleway-SemiBold.ttf';
   static const String fontsRalewayThin = 'assets/fonts/Raleway-Thin.ttf';
+  static const String imagesIcAddBlack = 'assets/images/ic_add_black.png';
+  static const String imagesIcAddImageBlack = 'assets/images/ic_add_image_black.png';
+  static const String imagesIcAddImageWhite = 'assets/images/ic_add_image_white.png';
+  static const String imagesIcAddUserBlack = 'assets/images/ic_add_user_black.png';
+  static const String imagesIcAddUserWhite = 'assets/images/ic_add_user_white.png';
   static const String imagesIcAddWhite = 'assets/images/ic_add_white.png';
+  static const String imagesIcChatBubbleBlack = 'assets/images/ic_chat_bubble_black.png';
   static const String imagesIcChatBubbleWhite = 'assets/images/ic_chat_bubble_white.png';
+  static const String imagesIcCheckMarkBlack = 'assets/images/ic_check_mark_black.png';
+  static const String imagesIcCheckMarkWhite = 'assets/images/ic_check_mark_white.png';
+  static const String imagesIcHomeBlack = 'assets/images/ic_home_black.png';
   static const String imagesIcHomeWhite = 'assets/images/ic_home_white.png';
+  static const String imagesIcInfoBlack = 'assets/images/ic_info_black.png';
+  static const String imagesIcInfoWhite = 'assets/images/ic_info_white.png';
+  static const String imagesIcPhotoPlaceholderBlack = 'assets/images/ic_photo_placeholder_black.png';
+  static const String imagesIcSearchBlack = 'assets/images/ic_search_black.png';
   static const String imagesIcSearchWhite = 'assets/images/ic_search_white.png';
+  static const String imagesIcSettingsBlack = 'assets/images/ic_settings_black.png';
   static const String imagesIcSettingsWhite = 'assets/images/ic_settings_white.png';
+  static const String imagesIcUserBlack = 'assets/images/ic_user_black.png';
   static const String imagesIcUserWhite = 'assets/images/ic_user_white.png';
 
 }

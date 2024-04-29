@@ -1,7 +1,11 @@
 
 class StringRes {
 
-  static String get appName => "APP NAME";
+  static String get appName => "App Name";
+  static String get home => "Home";
+  static String get chat => "Chat";
+  static String get settings => "Settings";
+  static String get search => "Search";
 
   /*----- Messages Strings Utils -----*/
   static String get msgSomethingWentWrong => "Something went wrong";

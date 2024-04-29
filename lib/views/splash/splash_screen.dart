@@ -1,9 +1,9 @@
 // import necessary package
 import 'package:flutter/material.dart';
-import 'package:socialapp/utils/color_res.dart';
-import 'package:socialapp/views/home/home_screen.dart';
 // import custom package
+import '../../utils/color_res.dart';
 import '../../utils/font_res.dart';
+import '../dashboard/dashboard_screen.dart';
 
 
 class SplashScreen extends StatefulWidget {
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Future.delayed(const Duration(seconds: 3),(){
       Navigator.of(context).push(
-        MaterialPageRoute(builder: (_) => const HomeScreen())
+        MaterialPageRoute(builder: (_) => const DashBoardScreen())
       );
     });
     super.initState();

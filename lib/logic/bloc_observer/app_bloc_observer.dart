@@ -1,6 +1,6 @@
 
-import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppBlocObserver extends BlocObserver {
   /// {@macro app_bloc_observer}
@@ -22,6 +22,5 @@ class AppBlocObserver extends BlocObserver {
       Transition<dynamic, dynamic> transition,
       ) {
     super.onTransition(bloc, transition);
-    print(transition);
   }
 }

@@ -1,19 +1,19 @@
 
 import 'package:flutter/material.dart';
-// import custom package
+
 import '../../utils/color_res.dart';
 import '../../utils/font_res.dart';
 import '../../utils/string_res.dart';
 import '../../widgets/custom_appbar_view.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class SearchScreen extends StatefulWidget {
+  const SearchScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<SearchScreen> createState() => _SearchScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           CustomAppBarView(
             title: Text(
-              StringRes.home.toUpperCase(),
+              StringRes.search.toUpperCase(),
               style: TextStyle(
                   fontFamily: FontRes.ralewaySemiBold,
                   color: ColorRes.white,
