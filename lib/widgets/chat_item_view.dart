@@ -1,12 +1,11 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:socialapp/utils/image_res.dart';
 import 'package:socialapp/widgets/rounded_container_view.dart';
 
 import '../utils/color_res.dart';
 import '../utils/font_res.dart';
+import '../views/chat/chat_screen.dart';
 
 class ChatItemView extends StatelessWidget {
   const ChatItemView({super.key});
@@ -25,7 +24,12 @@ class ChatItemView extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
       ),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).push(
+              MaterialPageRoute(
+                  builder: (_)=> const ChatScreen())
+          );
+        },
         borderRadius: BorderRadius.circular(5),
         child: Padding(
           padding: const EdgeInsets.symmetric(

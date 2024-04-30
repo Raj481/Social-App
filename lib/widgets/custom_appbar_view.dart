@@ -1,20 +1,19 @@
 
 import 'package:flutter/material.dart';
-import 'package:socialapp/utils/font_res.dart';
-
 import '../utils/color_res.dart';
-import '../utils/string_res.dart';
 
 class CustomAppBarView extends StatelessWidget {
 
   final Widget title;
+  final Widget? leading;
   final BoxDecoration? decoration;
   final EdgeInsets? padding;
   const CustomAppBarView({
     super.key,
     required this.title,
     this.decoration,
-    this.padding
+    this.padding,
+    this.leading
   });
 
   @override
@@ -30,6 +29,11 @@ class CustomAppBarView extends StatelessWidget {
       child: Row(
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          if(leading != null)
+            ...[
+              leading!,
+              const SizedBox(width: 10,)
+            ],
           title,
         ],
       ),

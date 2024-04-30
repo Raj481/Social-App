@@ -1,7 +1,5 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:socialapp/utils/font_res.dart';
 import '../utils/color_res.dart';
 import '../utils/image_res.dart';

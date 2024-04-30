@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:socialapp/views/chat/chat_screen.dart';
 
 import '../../utils/color_res.dart';
 import '../../utils/font_res.dart';
@@ -38,10 +39,7 @@ class _ChatListScreenState extends State<ChatListScreen> {
               child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (_, index) {
-                    return InkWell(
-                        onTap: (){},
-                        child: const ChatItemView()
-                    );
+                    return const ChatItemView();
                   }
               )
           )

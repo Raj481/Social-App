@@ -25,6 +25,8 @@ class Assets {
   static const String imagesIcPhotoPlaceholderBlack = 'assets/images/ic_photo_placeholder_black.png';
   static const String imagesIcSearchBlack = 'assets/images/ic_search_black.png';
   static const String imagesIcSearchWhite = 'assets/images/ic_search_white.png';
+  static const String imagesIcSendBlack = 'assets/images/ic_send_black.png';
+  static const String imagesIcSendWhite = 'assets/images/ic_send_white.png';
   static const String imagesIcSettingsBlack = 'assets/images/ic_settings_black.png';
   static const String imagesIcSettingsWhite = 'assets/images/ic_settings_white.png';
   static const String imagesIcUserBlack = 'assets/images/ic_user_black.png';

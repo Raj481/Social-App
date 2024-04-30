@@ -23,6 +23,8 @@ class ImageRes {
   static String get icSettingsWhite => "$image/ic_settings_white.png";
   static String get icUserWhite => "$image/ic_user_white.png";
   static String get icUserBlack => "$image/ic_user_black.png";
+  static String get icSendBlack => "$image/ic_send_black.png";
+  static String get icSendWhite => "$image/ic_send_white.png";
 
   /*--- utils ---*/
   static String get bg3 => "$utils/bg_3.jpg";
