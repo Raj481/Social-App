@@ -29,5 +29,6 @@ class Assets {
   static const String imagesIcSettingsWhite = 'assets/images/ic_settings_white.png';
   static const String imagesIcUserBlack = 'assets/images/ic_user_black.png';
   static const String imagesIcUserWhite = 'assets/images/ic_user_white.png';
+  static const String utilsBg3 = 'assets/images/utils/bg_3.jpg';
 
 }

@@ -16,8 +16,6 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
 
-
-
   final List<String> _list = [
     "Notifications",
     "Blocked List",
@@ -61,11 +59,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ),
                       boxDecoration: BoxDecoration(
                         color: ColorRes.greyMedium.withOpacity(.1),
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(5),
                       ),
                       child: InkWell(
                         onTap: (){},
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(5),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                             horizontal: 15
