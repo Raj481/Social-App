@@ -6,6 +6,8 @@ class StringRes {
   static String get chat => "Chat";
   static String get settings => "Settings";
   static String get search => "Search";
+  static String get post => "Post";
+  static String get detail => "Detail";
 
   /*----- Messages Strings Utils -----*/
   static String get msgSomethingWentWrong => "Something went wrong";

@@ -6,6 +6,7 @@ import '../../utils/font_res.dart';
 import '../../utils/string_res.dart';
 import '../../widgets/custom_appbar_view.dart';
 import '../../widgets/post_item_view.dart';
+import '../posts/post_detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -37,7 +38,18 @@ class _HomeScreenState extends State<HomeScreen> {
               child: ListView.builder(
                 physics: const BouncingScrollPhysics(),
                   itemBuilder: (_, index) {
-                    return const PostItemView();
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_)
+                                => const PostDetailScreen()
+                            )
+                        );
+                      },
+                        child: const PostItemView()
+                    );
                   }
               )
           )
