@@ -5,7 +5,7 @@ import 'package:socialapp/views/search/search_screen.dart';
 import 'package:socialapp/views/setting/settings_screen.dart';
 // import custom package
 import '../../utils/color_res.dart';
-import '../chat/chat_screen.dart';
+import '../chat/chat_list_screen.dart';
 import '../home/home_screen.dart';
 import 'bottom_nav_view.dart';
 
@@ -29,7 +29,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         index: index,
         children: const [
           HomeScreen(),
-          ChatScreen(),
+          ChatListScreen(),
           SizedBox.shrink(),
           SearchScreen(),
           SettingsScreen()

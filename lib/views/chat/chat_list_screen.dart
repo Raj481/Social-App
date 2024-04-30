@@ -1,19 +1,20 @@
 
+
 import 'package:flutter/material.dart';
-// import custom package
+
 import '../../utils/color_res.dart';
 import '../../utils/font_res.dart';
 import '../../utils/string_res.dart';
+import '../../widgets/chat_item_view.dart';
 import '../../widgets/custom_appbar_view.dart';
-import '../../widgets/post_item_view.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class ChatListScreen extends StatefulWidget {
+  const ChatListScreen({super.key});
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ChatListScreen> createState() => _ChatListScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _ChatListScreenState extends State<ChatListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           CustomAppBarView(
             title: Text(
-              StringRes.appName.toUpperCase(),
+              StringRes.chat.toUpperCase(),
               style: TextStyle(
                   fontFamily: FontRes.ralewaySemiBold,
                   color: ColorRes.white,
@@ -30,14 +31,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             decoration: BoxDecoration(
-              color: ColorRes.primaryBlack
+                color: ColorRes.primaryBlack
             ),
           ),
           Flexible(
               child: ListView.builder(
-                physics: const BouncingScrollPhysics(),
+                  physics: const BouncingScrollPhysics(),
                   itemBuilder: (_, index) {
-                    return const PostItemView();
+                    return InkWell(
+                        onTap: (){},
+                        child: const ChatItemView()
+                    );
                   }
               )
           )

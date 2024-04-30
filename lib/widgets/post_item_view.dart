@@ -38,7 +38,7 @@ class PostItemView extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 10, vertical: 10
+                  horizontal: 15, vertical: 10
                 ),
                 child: Column(
                   children: [
@@ -49,7 +49,7 @@ class PostItemView extends StatelessWidget {
                           "Rajesh Regar",
                           style: TextStyle(
                             color: ColorRes.white,
-                            fontFamily: FontRes.robotoRegular,
+                            fontFamily: FontRes.robotoMedium,
                             fontSize: 18
                           ),
                         ),
@@ -57,16 +57,16 @@ class PostItemView extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(
-                              Icons.favorite_border,
+                              Icons.favorite,
                               color: ColorRes.white,
-                              size: 14,
+                              size: 18,
                             ),
                             const SizedBox(width: 5,),
                             Text(
                               "123456",
                               style: TextStyle(
                                   color: ColorRes.white,
-                                  fontFamily: FontRes.robotoRegular,
+                                  fontFamily: FontRes.robotoMedium,
                                   fontSize: 14
                               ),
                             )
