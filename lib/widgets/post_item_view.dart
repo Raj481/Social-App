@@ -69,7 +69,7 @@ class PostItemView extends StatelessWidget {
                               ),
                             )
                           ],
-                        )
+                        ),
                       ],
                     ),
                     Row(

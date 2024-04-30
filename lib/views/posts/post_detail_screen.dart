@@ -54,7 +54,57 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
               ),
               Container(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 15, vertical: 10
+                  horizontal: 15, vertical: 10
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // like button
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          Icons.favorite_border,
+                          color: ColorRes.white,
+                          size: 21,
+                        ),
+                        const SizedBox(width: 5,),
+                        Text(
+                          "2000",
+                          style: TextStyle(
+                              color: ColorRes.white,
+                              fontFamily: FontRes.robotoMedium,
+                              fontSize: 14
+                          ),
+                        )
+                      ],
+                    ),
+                    // comment button
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          Icons.comment,
+                          color: ColorRes.white,
+                          size: 21,
+                        ),
+                        const SizedBox(width: 5,),
+                        Text(
+                          "123",
+                          style: TextStyle(
+                              color: ColorRes.white,
+                              fontFamily: FontRes.robotoMedium,
+                              fontSize: 14
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 15, vertical: 0
                 ),
                 child: Column(
                   children: [

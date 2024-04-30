@@ -18,6 +18,8 @@ class Assets {
   static const String imagesIcChatBubbleWhite = 'assets/images/ic_chat_bubble_white.png';
   static const String imagesIcCheckMarkBlack = 'assets/images/ic_check_mark_black.png';
   static const String imagesIcCheckMarkWhite = 'assets/images/ic_check_mark_white.png';
+  static const String imagesIcCommentBlack = 'assets/images/ic_comment_black.png';
+  static const String imagesIcCommentWhite = 'assets/images/ic_comment_white.png';
   static const String imagesIcHomeBlack = 'assets/images/ic_home_black.png';
   static const String imagesIcHomeWhite = 'assets/images/ic_home_white.png';
   static const String imagesIcInfoBlack = 'assets/images/ic_info_black.png';

@@ -6,6 +6,7 @@ class CustomAppBarView extends StatelessWidget {
 
   final Widget title;
   final Widget? leading;
+  final List<Widget> trailing;
   final BoxDecoration? decoration;
   final EdgeInsets? padding;
   const CustomAppBarView({
@@ -13,7 +14,8 @@ class CustomAppBarView extends StatelessWidget {
     required this.title,
     this.decoration,
     this.padding,
-    this.leading
+    this.leading,
+    this.trailing = const []
   });
 
   @override
@@ -29,12 +31,22 @@ class CustomAppBarView extends StatelessWidget {
       child: Row(
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          if(leading != null)
-            ...[
-              leading!,
-              const SizedBox(width: 10,)
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if(leading != null)
+                ...[
+                  leading!,
+                  const SizedBox(width: 10,)
+                ],
+              title,
             ],
-          title,
+          ),
+          if(trailing.isNotEmpty)
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: trailing,
+          ),
         ],
       ),
     );
