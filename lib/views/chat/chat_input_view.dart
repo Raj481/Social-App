@@ -1,6 +1,9 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:socialapp/utils/color_res.dart';
+import 'package:socialapp/utils/font_res.dart';
 import 'package:socialapp/utils/image_res.dart';
 
 class ChatInputView extends StatefulWidget {
@@ -14,12 +17,52 @@ class _ChatInputViewState extends State<ChatInputView> {
   Widget build(BuildContext context) {
     return Container(
       color: ColorRes.primaryBlack,
+      padding: const EdgeInsets.symmetric(
+        horizontal: 15, vertical: 15
+      ),
       constraints: const BoxConstraints(
           minHeight: 65
       ),
       child: Row(
         children: [
-
+          Flexible(
+            child: Container(
+              decoration: BoxDecoration(
+                color: ColorRes.white.withOpacity(.1),
+                borderRadius: BorderRadius.circular(10)
+              ),
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 10
+              ),
+              constraints: const BoxConstraints(
+                  minHeight: 45
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                          hintStyle: TextStyle(
+                              color: ColorRes.white.withOpacity(.5),
+                              fontFamily: FontRes.robotoRegular,
+                              fontSize: 16
+                          ),
+                          hintText: "Type Here"
+                        ),
+                        style: TextStyle(
+                          color: ColorRes.white,
+                          fontFamily: FontRes.robotoRegular,
+                          fontSize: 16
+                        ),
+                      )
+                  )
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(width: 5,),
           InkWell(
             onTap: () {},
             borderRadius: BorderRadius.circular(10),

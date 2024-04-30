@@ -19,6 +19,7 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       backgroundColor: ColorRes.white.withOpacity(.2),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomAppBarView(
             title: Text(
@@ -43,9 +44,9 @@ class _ChatScreenState extends State<ChatScreen> {
                 color: ColorRes.primaryBlack,
             ),
           ),
+          const ChatInputView(),
         ],
       ),
-      bottomNavigationBar: const ChatInputView(),
     );
   }
 }
