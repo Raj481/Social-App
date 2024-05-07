@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:socialapp/extentions/string_extentions.dart';
 import 'package:socialapp/utils/font_res.dart';
 import '../utils/color_res.dart';
 import '../utils/image_res.dart';
@@ -16,27 +17,32 @@ class PostItemView extends StatelessWidget {
       ),
       margin: const EdgeInsets.symmetric(
           horizontal: 0,
-          vertical: 5
+          vertical: 10
       ),
       padding: const EdgeInsets.symmetric(
-        vertical: 5
+        vertical: 10
       ),
       decoration: BoxDecoration(
-        color: ColorRes.white.withOpacity(.01),
-        borderRadius: BorderRadius.circular(5)
+        color: ColorRes.white.withOpacity(.0),
+        borderRadius: BorderRadius.circular(10)
       ),
       child: Stack(
         children: [
           Column(
             children: [
-              Image(
-                  image: AssetImage(
-                      ImageRes.bg3
-                  )
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 5
+                ),
+                child: Image(
+                    image: AssetImage(
+                        ImageRes.bg3
+                    )
+                ),
               ),
               Container(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 15, vertical: 10
+                  horizontal: 15, vertical: 15
                 ),
                 child: Column(
                   children: [
@@ -61,7 +67,7 @@ class PostItemView extends StatelessWidget {
                             ),
                             const SizedBox(width: 5,),
                             Text(
-                              "123456",
+                              "54645546".kmbGenerator(),
                               style: TextStyle(
                                   color: ColorRes.white,
                                   fontFamily: FontRes.robotoMedium,

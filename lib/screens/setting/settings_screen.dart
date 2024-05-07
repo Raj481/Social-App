@@ -66,7 +66,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         borderRadius: BorderRadius.circular(5),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
-                            horizontal: 15
+                            horizontal: 15, vertical: 15
                           ),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,

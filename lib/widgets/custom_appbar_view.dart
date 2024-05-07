@@ -29,7 +29,7 @@ class CustomAppBarView extends StatelessWidget {
           color: ColorRes.secondaryBlack.withOpacity(.1)
       ),
       child: Row(
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             mainAxisSize: MainAxisSize.min,

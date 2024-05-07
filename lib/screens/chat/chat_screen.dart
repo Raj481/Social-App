@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
-
+/// import custom package
 import '../../utils/color_res.dart';
 import '../../utils/font_res.dart';
 import '../../utils/string_res.dart';
 import '../../widgets/custom_appbar_view.dart';
-import 'chat_input_view.dart';
+import 'common/chat_input_view.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});

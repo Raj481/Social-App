@@ -1,8 +1,6 @@
 
-
 import 'package:flutter/material.dart';
-import 'package:socialapp/views/chat/chat_screen.dart';
-
+/// import custom package
 import '../../utils/color_res.dart';
 import '../../utils/font_res.dart';
 import '../../utils/string_res.dart';

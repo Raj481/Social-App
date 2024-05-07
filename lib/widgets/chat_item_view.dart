@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
-import 'package:socialapp/utils/image_res.dart';
-import 'package:socialapp/widgets/rounded_container_view.dart';
-
+import '../screens/chat/chat_screen.dart';
 import '../utils/color_res.dart';
 import '../utils/font_res.dart';
-import '../views/chat/chat_screen.dart';
+import '../utils/image_res.dart';
+import 'rounded_container_view.dart';
+
 
 class ChatItemView extends StatelessWidget {
   const ChatItemView({super.key});

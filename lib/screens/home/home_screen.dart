@@ -30,6 +30,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontSize: 18
               ),
             ),
+            trailing: [
+              InkWell(
+                onTap: () {},
+                child: Icon(
+                  Icons.notifications_outlined,
+                  color: ColorRes.white,
+                  size: 24,
+                ),
+              )
+            ],
             decoration: BoxDecoration(
               color: ColorRes.primaryBlack
             ),

@@ -1,6 +1,0 @@
-
-
-class TextStyleRes {
-  TextStyleRes._();
-
-}

@@ -1,11 +1,10 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:socialapp/extentions/string_extentions.dart';
+/// import custom package
 import '../../utils/color_res.dart';
 import '../../utils/font_res.dart';
 import '../../utils/image_res.dart';
-import '../../utils/string_res.dart';
 import '../../widgets/custom_appbar_view.dart';
 
 class PostDetailScreen extends StatefulWidget {
@@ -70,7 +69,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
                         ),
                         const SizedBox(width: 5,),
                         Text(
-                          "2000",
+                          "54645546".kmbGenerator(),
                           style: TextStyle(
                               color: ColorRes.white,
                               fontFamily: FontRes.robotoMedium,
@@ -90,7 +89,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
                         ),
                         const SizedBox(width: 5,),
                         Text(
-                          "123",
+                          "54645546".kmbGenerator(),
                           style: TextStyle(
                               color: ColorRes.white,
                               fontFamily: FontRes.robotoMedium,

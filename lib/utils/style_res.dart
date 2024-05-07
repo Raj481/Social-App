@@ -1,0 +1,6 @@
+
+
+class StyleRes {
+  StyleRes._();
+
+}

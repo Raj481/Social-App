@@ -14,6 +14,7 @@ dependencies:
   #----- State Management -----#
   # bloc: ^8.1.4
   flutter_bloc: ^8.1.5
+  shared_preferences: any
   #----- UI -----#
   font_awesome_flutter: ^10.7.0
 

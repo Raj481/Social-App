@@ -1,10 +1,10 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:socialapp/utils/color_res.dart';
-import 'package:socialapp/utils/font_res.dart';
-import 'package:socialapp/utils/image_res.dart';
+/// import custom package
+import '../../../utils/color_res.dart';
+import '../../../utils/font_res.dart';
+import '../../../utils/image_res.dart';
+
 
 class ChatInputView extends StatefulWidget {
   const ChatInputView({super.key});
@@ -35,7 +35,7 @@ class _ChatInputViewState extends State<ChatInputView> {
                   horizontal: 10
               ),
               constraints: const BoxConstraints(
-                  minHeight: 45
+                  maxHeight: 120
               ),
               child: Row(
                 children: [
@@ -56,6 +56,7 @@ class _ChatInputViewState extends State<ChatInputView> {
                           fontFamily: FontRes.robotoRegular,
                           fontSize: 16
                         ),
+                        maxLines: null,
                       )
                   )
                 ],

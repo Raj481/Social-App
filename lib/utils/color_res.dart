@@ -2,6 +2,13 @@
 import 'package:flutter/material.dart';
 class ColorRes {
   ColorRes._();
+  static ColorRes instance =  ColorRes._();
+  static bool isDarkMode = false;
+  static ColorRes of(BuildContext context){
+    isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    return instance;
+  }
+  static Color get transparent => Colors.transparent;
   static Color get black => const Color(0xFF000000);
   static Color get primaryBlack => const Color(0xFF262626);
   static Color get secondaryBlack => const Color(0xFF595959);

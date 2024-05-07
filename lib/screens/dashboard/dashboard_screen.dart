@@ -1,12 +1,16 @@
 
 // import necessary package
 import 'package:flutter/material.dart';
-import 'package:socialapp/views/search/search_screen.dart';
-import 'package:socialapp/views/setting/settings_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 // import custom package
+import '../../logic/theme/theme_bloc.dart';
+import '../../logic/theme/theme_event.dart';
 import '../../utils/color_res.dart';
 import '../chat/chat_list_screen.dart';
 import '../home/home_screen.dart';
+import '../posts/add_new_post_screen.dart';
+import '../search/search_screen.dart';
+import '../setting/settings_screen.dart';
 import 'bottom_nav_view.dart';
 
 
@@ -24,7 +28,8 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorRes.primaryBlack,
+      // ColorRes.primaryBlack
+      backgroundColor: Theme.of(context).primaryColor,
       body: IndexedStack(
         index: index,
         children: const [
@@ -36,11 +41,20 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         ],
       ),
       bottomNavigationBar:  BottomNavView(
+        currentIndex: index,
         onTap: (value ) {
-          if(value == 2) return;
-          setState(() {
-            index = value;
-          });
+          if(value == 2) {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_)=> const AddNewPostScreen()
+                ));
+          } else {
+            setState(() {
+              index = value;
+            });
+           // BlocProvider.of<ThemeBloc>(context).add(ThemeSwitchEvent());
+          }
         },
       ),
     );
