@@ -6,7 +6,12 @@ import '../utils/color_res.dart';
 import '../utils/image_res.dart';
 
 class PostItemView extends StatelessWidget {
-  const PostItemView({super.key});
+
+  final int index;
+  const PostItemView({
+    super.key,
+    required this.index
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +39,13 @@ class PostItemView extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(
                   horizontal: 5
                 ),
-                child: Image(
-                    image: AssetImage(
-                        ImageRes.bg3
-                    )
+                child:  Hero(
+                  tag: "post${index}img",
+                  child: Image(
+                      image: AssetImage(
+                          ImageRes.bg3
+                      )
+                  ),
                 ),
               ),
               Container(
@@ -49,27 +57,31 @@ class PostItemView extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          "Rajesh Regar",
-                          style: Theme.of(context).textTheme.titleMedium,
+                        Hero(
+                          tag: "post$index",
+                          child: Text(
+                            "Rajesh Regar",
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(
                               Icons.favorite,
-                              color: ColorRes.white,
+                              color: Theme.of(context).iconTheme.color,
                               size: 18,
                             ),
                             const SizedBox(width: 5,),
                             Text(
                               "54645546".kmbGenerator(),
-                              style: Theme.of(context).textTheme.titleMedium,
+                              style: Theme.of(context).textTheme.titleLarge,
                             )
                           ],
                         ),
                       ],
                     ),
+                    const SizedBox(height: 10,),
                     Row(
                       children: [
                         Flexible(

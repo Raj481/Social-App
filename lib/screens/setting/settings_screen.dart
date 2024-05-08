@@ -19,17 +19,6 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
 
-  final List<String> _list = [
-    "Theme Light",
-    "Notifications",
-    "Blocked List",
-    "Terms and Conditions",
-    "Privacy",
-    "Help",
-    "About",
-    "Logout"
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,66 +31,85 @@ class _SettingsScreenState extends State<SettingsScreen> {
               style: Theme.of(context).textTheme.headlineLarge,
             ),
           ),
-          Flexible(
-              child: ListView.builder(
-                  physics: const BouncingScrollPhysics(),
-                  itemCount: _list.length,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 25, vertical: 25
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 25,
+            ),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const SizedBox(height: 25,),
+                  _buildItem(
+                      name: StringRes.themeLight,
+                      callback: () => onItemTap(0)
                   ),
-                  itemBuilder: (_, index){
-                    return RoundedContainerView(
-                      margin: const EdgeInsets.symmetric(
-                        vertical: 5
-                      ),
-                      constraints: const BoxConstraints(
-                        minHeight: 45
-                      ),
-                      boxDecoration: BoxDecoration(
-                        color: Theme.of(context).cardColor,
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: InkWell(
-                        onTap: () => onItemTap(index),
-                        borderRadius: BorderRadius.circular(5),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 15, vertical: 15
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                _list.elementAt(index).toUpperCase(),
-                                style: Theme.of(context).textTheme.displaySmall,
-                              ),
-
-                              // Switch(
-                              //     value: false,
-                              //     onChanged: (value){},
-                              // )
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
-                  }
-              )
+                  _buildItem(
+                      name: StringRes.privacy,
+                      callback: () => onItemTap(1)
+                  ),
+                  _buildItem(
+                      name: StringRes.termsAndConditions,
+                      callback: () => onItemTap(2)
+                  ),
+                  _buildItem(
+                      name: StringRes.help,
+                      callback: () => onItemTap(3)
+                  ),
+                ],
+              ),
+            ),
           )
         ],
       ),
     );
   }
 
-  Widget _buildItem(){
+  Widget _buildItem({
+    required String name,
+    bool isSwitchEnable = false,
+    required Function callback }){
 
-    return Container();
+    return RoundedContainerView(
+      margin: const EdgeInsets.symmetric(
+          vertical: 5
+      ),
+      constraints: const BoxConstraints(
+          minHeight: 50
+      ),
+      boxDecoration: BoxDecoration(
+        color: Theme.of(context).cardColor,
+        borderRadius: BorderRadius.circular(5),
+      ),
+      child: InkWell(
+        onTap: () => callback(),
+        borderRadius: BorderRadius.circular(5),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+              horizontal: 15, vertical: 15
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                name.toUpperCase(),
+                style: Theme.of(context).textTheme.displaySmall,
+              ),
+
+              // Switch(
+              //     value: false,
+              //     onChanged: (value){},
+              // )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   onItemTap(int index){
     if(index == 0){
       setState(() {
-        _list[index] = _list[index].contains("Theme Light") ? "Theme Dark" : "Theme Light";
+       // _list[index] = _list[index].contains("Theme Light") ? "Theme Dark" : "Theme Light";
       });
       BlocProvider.of<ThemeBloc>(context).add(ThemeSwitchEvent());
     }

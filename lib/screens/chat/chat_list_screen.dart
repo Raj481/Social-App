@@ -30,7 +30,7 @@ class _ChatListScreenState extends State<ChatListScreen> {
               child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
                   itemBuilder: (_, index) {
-                    return const ChatItemView();
+                    return ChatItemView(index: index,);
                   }
               )
           )

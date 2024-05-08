@@ -1,15 +1,13 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../screens/chat/chat_screen.dart';
-import '../utils/color_res.dart';
-import '../utils/font_res.dart';
 import '../utils/image_res.dart';
 import 'rounded_container_view.dart';
 
-
 class ChatItemView extends StatelessWidget {
-  const ChatItemView({super.key});
-
+  final int index;
+  const ChatItemView({super.key, required this.index});
   @override
   Widget build(BuildContext context) {
     return RoundedContainerView(
@@ -27,7 +25,11 @@ class ChatItemView extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push(
               MaterialPageRoute(
-                  builder: (_)=> const ChatScreen())
+                  builder: (_) => ChatScreen(
+                    index: index,
+                    name: "Bhawana Badgurjar",
+                  )
+              )
           );
         },
         borderRadius: BorderRadius.circular(5),
@@ -59,9 +61,12 @@ class ChatItemView extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Text(
-                              "Bhawana Badgurjar",
-                              style: Theme.of(context).textTheme.titleLarge,
+                            Hero(
+                              tag: "chat${index}",
+                              child: Text(
+                                "Bhawana Badgurjar",
+                                style: Theme.of(context).textTheme.titleLarge,
+                              ),
                             ),
                           ],
                         ),

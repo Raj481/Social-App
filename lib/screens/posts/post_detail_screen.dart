@@ -8,7 +8,12 @@ import '../../utils/image_res.dart';
 import '../../widgets/custom_appbar_view.dart';
 
 class PostDetailScreen extends StatefulWidget {
-  const PostDetailScreen({super.key});
+
+  final int index;
+  const PostDetailScreen({
+    super.key,
+    required this.index
+  });
 
   @override
   State<PostDetailScreen> createState() => _PostDetailScreenState();
@@ -22,9 +27,13 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
       body: Column(
         children: [
           CustomAppBarView(
-            title: Text(
-              "Rajesh Regar".toUpperCase(),
-              style: Theme.of(context).textTheme.headlineLarge,
+            title: Hero(
+              tag: "post${widget.index}",
+              child: Text(
+                "Rajesh Regar".toUpperCase(),
+                style: Theme.of(context).textTheme.headlineLarge,
+              ),
+
             ),
             leading: InkWell(
               onTap: () {
@@ -39,10 +48,13 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
           ),
           Column(
             children: [
-              Image(
-                  image: AssetImage(
-                      ImageRes.bg3
-                  )
+              Hero(
+                tag: "post${widget.index}img",
+                child: Image(
+                    image: AssetImage(
+                        ImageRes.bg3
+                    )
+                ),
               ),
               Container(
                 padding: const EdgeInsets.symmetric(

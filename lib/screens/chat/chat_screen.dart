@@ -9,7 +9,10 @@ import '../../widgets/custom_appbar_view.dart';
 import 'common/chat_input_view.dart';
 
 class ChatScreen extends StatefulWidget {
-  const ChatScreen({super.key});
+
+  final int index;
+  final String name;
+  const ChatScreen({super.key, required this.index, required this.name});
   @override
   State<ChatScreen> createState() => _ChatScreenState();
 }
@@ -23,9 +26,12 @@ class _ChatScreenState extends State<ChatScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomAppBarView(
-            title: Text(
-              StringRes.chat.toUpperCase(),
-              style: Theme.of(context).textTheme.headlineLarge,
+            title:  Hero(
+              tag: "chat${widget.index}",
+              child: Text(
+                  widget.name.toUpperCase(),
+                style: Theme.of(context).textTheme.headlineLarge,
+              ),
             ),
             leading: InkWell(
               onTap: () {

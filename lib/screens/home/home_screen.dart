@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:socialapp/screens/profile/profile_screen.dart';
 // import custom package
 import '../../utils/color_res.dart';
 import '../../utils/font_res.dart';
@@ -37,7 +38,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(width: 8,),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const ProfileScreen()));
+                },
                 child: Icon(
                   Icons.person,
                   color: Theme.of(context).iconTheme.color,
@@ -56,11 +59,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             context,
                             MaterialPageRoute(
                                 builder: (_)
-                                => const PostDetailScreen()
+                                => PostDetailScreen( index: index,)
                             )
                         );
                       },
-                        child: const PostItemView()
+                        child: PostItemView(index: index,)
                     );
                   }
               )
