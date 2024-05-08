@@ -27,7 +27,7 @@ class ChatItemView extends StatelessWidget {
               MaterialPageRoute(
                   builder: (_) => ChatScreen(
                     index: index,
-                    name: "Bhawana Badgurjar",
+                    name: "Bhavi",
                   )
               )
           );
@@ -64,7 +64,7 @@ class ChatItemView extends StatelessWidget {
                             Hero(
                               tag: "chat${index}",
                               child: Text(
-                                "Bhawana Badgurjar",
+                                "Bhavi",
                                 style: Theme.of(context).textTheme.titleLarge,
                               ),
                             ),
