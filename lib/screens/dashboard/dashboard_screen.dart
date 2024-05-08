@@ -30,8 +30,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
     return BlocBuilder<ThemeBloc, ThemeData>(
         builder: (_, state) {
           return Scaffold(
-            // ColorRes.primaryBlack
-            backgroundColor: Theme.of(context).primaryColor,
+            backgroundColor: Theme.of(context).scaffoldBackgroundColor,
             body: IndexedStack(
               index: index,
               children: const [

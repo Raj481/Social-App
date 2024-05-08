@@ -16,14 +16,14 @@ class PostItemView extends StatelessWidget {
         minHeight: MediaQuery.of(context).size.height * .3,
       ),
       margin: const EdgeInsets.symmetric(
-          horizontal: 0,
+          horizontal: 10,
           vertical: 10
       ),
       padding: const EdgeInsets.symmetric(
         vertical: 10
       ),
       decoration: BoxDecoration(
-        color: ColorRes.white.withOpacity(.0),
+        color: Theme.of(context).primaryColor,
         borderRadius: BorderRadius.circular(10)
       ),
       child: Stack(
@@ -51,11 +51,7 @@ class PostItemView extends StatelessWidget {
                       children: [
                         Text(
                           "Rajesh Regar",
-                          style: TextStyle(
-                            color: ColorRes.white,
-                            fontFamily: FontRes.robotoMedium,
-                            fontSize: 18
-                          ),
+                          style: Theme.of(context).textTheme.titleMedium,
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.min,
@@ -68,11 +64,7 @@ class PostItemView extends StatelessWidget {
                             const SizedBox(width: 5,),
                             Text(
                               "54645546".kmbGenerator(),
-                              style: TextStyle(
-                                  color: ColorRes.white,
-                                  fontFamily: FontRes.robotoMedium,
-                                  fontSize: 14
-                              ),
+                              style: Theme.of(context).textTheme.titleMedium,
                             )
                           ],
                         ),
@@ -85,11 +77,7 @@ class PostItemView extends StatelessWidget {
                             "A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.",
                             maxLines: 3,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(
-                              color: ColorRes.greyLight,
-                              fontFamily: FontRes.robotoRegular,
-                              fontSize: 16
-                            ),
+                            style: Theme.of(context).textTheme.bodyMedium,
                           ),
                         )
                       ],

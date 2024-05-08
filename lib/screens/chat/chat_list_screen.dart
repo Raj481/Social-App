@@ -23,7 +23,7 @@ class _ChatListScreenState extends State<ChatListScreen> {
           CustomAppBarView(
             title: Text(
               StringRes.chat.toUpperCase(),
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
           ),
           Flexible(

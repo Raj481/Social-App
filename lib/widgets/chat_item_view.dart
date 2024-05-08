@@ -20,7 +20,7 @@ class ChatItemView extends StatelessWidget {
           minHeight: 45
       ),
       boxDecoration: BoxDecoration(
-        color: ColorRes.greyMedium.withOpacity(.1),
+        color: Theme.of(context).primaryColor,
         borderRadius: BorderRadius.circular(5),
       ),
       child: InkWell(
@@ -44,7 +44,7 @@ class ChatItemView extends StatelessWidget {
                     width: 45,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
-                        color: ColorRes.white,
+                        color: Theme.of(context).colorScheme.background,
                         image: DecorationImage(
                             image: AssetImage(
                                 ImageRes.bg3
@@ -61,11 +61,7 @@ class ChatItemView extends StatelessWidget {
                           children: [
                             Text(
                               "Bhawana Badgurjar",
-                              style: TextStyle(
-                                  fontFamily: FontRes.ralewaySemiBold,
-                                  color: ColorRes.white,
-                                  fontSize: 18
-                              ),
+                              style: Theme.of(context).textTheme.titleLarge,
                             ),
                           ],
                         ),
@@ -73,11 +69,7 @@ class ChatItemView extends StatelessWidget {
                           children: [
                             Text(
                               "Hello Rajesh",
-                              style: TextStyle(
-                                  fontFamily: FontRes.robotoRegular,
-                                  color: ColorRes.greyLight,
-                                  fontSize: 14
-                              ),
+                              style: Theme.of(context).textTheme.bodyMedium,
                             ),
                           ],
                         ),
@@ -90,11 +82,7 @@ class ChatItemView extends StatelessWidget {
                 right: 0, bottom: 0,
                 child: Text(
                   "09:50 pm",
-                  style: TextStyle(
-                      fontFamily: FontRes.robotoRegular,
-                      color: ColorRes.greyLight.withOpacity(.5),
-                      fontSize: 12
-                  ),
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
             ],

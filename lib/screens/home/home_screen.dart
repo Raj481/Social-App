@@ -24,17 +24,26 @@ class _HomeScreenState extends State<HomeScreen> {
           CustomAppBarView(
             title: Text(
               StringRes.appName.toUpperCase(),
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
             trailing: [
               InkWell(
                 onTap: () {},
                 child: Icon(
                   Icons.notifications_outlined,
-                  color: ColorRes.white,
+                  color: Theme.of(context).iconTheme.color,
                   size: 24,
                 ),
-              )
+              ),
+              const SizedBox(width: 8,),
+              InkWell(
+                onTap: () {},
+                child: Icon(
+                  Icons.person,
+                  color: Theme.of(context).iconTheme.color,
+                  size: 24,
+                ),
+              ),
             ],
           ),
           Flexible(

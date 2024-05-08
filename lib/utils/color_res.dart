@@ -29,5 +29,9 @@ class ColorRes {
   static Color get jet => const Color(0xFF34312D);
   static Color get almond => const Color(0xFFF2E2D2);
   static Color get ashGrey => const Color(0xFFBCC1BA);
+  static Color get platinum => const Color(0xFFCCDBDC);
+  static Color get night => const Color(0xFF0C120C);
+  static Color get dimGray => const Color(0xFF6D7275);
+  static Color get ghostWhite => const Color(0xFFECEBF3);
 
 }

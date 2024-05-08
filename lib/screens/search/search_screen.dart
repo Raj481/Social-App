@@ -25,7 +25,7 @@ class _SearchScreenState extends State<SearchScreen> {
           CustomAppBarView(
             title: Text(
               StringRes.search.toUpperCase(),
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
           ),
           const SizedBox(height: 15,),

@@ -39,7 +39,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           CustomAppBarView(
             title: Text(
               StringRes.settings.toUpperCase(),
-              style: Theme.of(context).textTheme.titleLarge,
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
           ),
           Flexible(
@@ -75,6 +75,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                                 _list.elementAt(index).toUpperCase(),
                                 style: Theme.of(context).textTheme.displaySmall,
                               ),
+
+                              // Switch(
+                              //     value: false,
+                              //     onChanged: (value){},
+                              // )
                             ],
                           ),
                         ),
@@ -88,10 +93,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
+  Widget _buildItem(){
+
+    return Container();
+  }
+
   onItemTap(int index){
     if(index == 0){
       setState(() {
-        _list[index] = "Theme Light";
+        _list[index] = _list[index].contains("Theme Light") ? "Theme Dark" : "Theme Light";
       });
       BlocProvider.of<ThemeBloc>(context).add(ThemeSwitchEvent());
     }

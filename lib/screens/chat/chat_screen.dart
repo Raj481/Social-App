@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 /// import custom package
 import '../../utils/color_res.dart';
@@ -17,18 +18,14 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorRes.white.withOpacity(.2),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CustomAppBarView(
             title: Text(
               StringRes.chat.toUpperCase(),
-              style: TextStyle(
-                  fontFamily: FontRes.ralewaySemiBold,
-                  color: ColorRes.white,
-                  fontSize: 18
-              ),
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
             leading: InkWell(
               onTap: () {
@@ -36,13 +33,15 @@ class _ChatScreenState extends State<ChatScreen> {
               },
               child: Icon(
                 Icons.arrow_back_ios,
-                color: ColorRes.white,
-                size: 15,
+                color: Theme.of(context).iconTheme.color,
+                size: 14,
               ),
             ),
-            decoration: BoxDecoration(
-                color: ColorRes.primaryBlack,
-            ),
+          ),
+          Expanded(
+              child: Container(
+                color: Theme.of(context).colorScheme.background,
+              )
           ),
           const ChatInputView(),
         ],

@@ -18,17 +18,13 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorRes.white.withOpacity(.2),
+      backgroundColor: Theme.of(context).primaryColor,
       body: Column(
         children: [
           CustomAppBarView(
             title: Text(
               "Rajesh Regar".toUpperCase(),
-              style: TextStyle(
-                  fontFamily: FontRes.ralewaySemiBold,
-                  color: ColorRes.white,
-                  fontSize: 18
-              ),
+              style: Theme.of(context).textTheme.headlineLarge,
             ),
             leading: InkWell(
               onTap: () {
@@ -36,12 +32,9 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
               },
               child: Icon(
                 Icons.arrow_back_ios,
-                color: ColorRes.white,
-                size: 15,
+                color: Theme.of(context).iconTheme.color,
+                size: 14,
               ),
-            ),
-            decoration: BoxDecoration(
-              color: ColorRes.primaryBlack,
             ),
           ),
           Column(
@@ -64,17 +57,13 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
                       children: [
                         Icon(
                           Icons.favorite_border,
-                          color: ColorRes.white,
-                          size: 21,
+                          color: Theme.of(context).iconTheme.color,
+                          size: 18,
                         ),
                         const SizedBox(width: 5,),
                         Text(
                           "54645546".kmbGenerator(),
-                          style: TextStyle(
-                              color: ColorRes.white,
-                              fontFamily: FontRes.robotoMedium,
-                              fontSize: 14
-                          ),
+                          style: Theme.of(context).textTheme.titleMedium,
                         )
                       ],
                     ),
@@ -84,17 +73,13 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
                       children: [
                         Icon(
                           Icons.comment,
-                          color: ColorRes.white,
-                          size: 21,
+                          color: Theme.of(context).iconTheme.color,
+                          size: 18,
                         ),
                         const SizedBox(width: 5,),
                         Text(
                           "54645546".kmbGenerator(),
-                          style: TextStyle(
-                              color: ColorRes.white,
-                              fontFamily: FontRes.robotoMedium,
-                              fontSize: 14
-                          ),
+                          style: Theme.of(context).textTheme.titleMedium,
                         )
                       ],
                     ),
@@ -112,11 +97,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
                         Expanded(
                           child: Text(
                             "A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long.",
-                            style: TextStyle(
-                                color: ColorRes.greyLight,
-                                fontFamily: FontRes.robotoRegular,
-                                fontSize: 16
-                            ),
+                            style: Theme.of(context).textTheme.bodyMedium,
                           ),
                         )
                       ],
