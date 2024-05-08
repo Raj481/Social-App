@@ -18,17 +18,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorRes.white.withOpacity(.03),
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Column(
         children: [
           CustomAppBarView(
             title: Text(
               StringRes.appName.toUpperCase(),
-              style: TextStyle(
-                  fontFamily: FontRes.ralewaySemiBold,
-                  color: ColorRes.white,
-                  fontSize: 18
-              ),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             trailing: [
               InkWell(
@@ -40,9 +36,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               )
             ],
-            decoration: BoxDecoration(
-              color: ColorRes.primaryBlack
-            ),
           ),
           Flexible(
               child: ListView.builder(

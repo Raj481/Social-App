@@ -17,20 +17,13 @@ class _ChatListScreenState extends State<ChatListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorRes.white.withOpacity(.03),
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Column(
         children: [
           CustomAppBarView(
             title: Text(
               StringRes.chat.toUpperCase(),
-              style: TextStyle(
-                  fontFamily: FontRes.ralewaySemiBold,
-                  color: ColorRes.white,
-                  fontSize: 18
-              ),
-            ),
-            decoration: BoxDecoration(
-                color: ColorRes.primaryBlack
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
           Flexible(

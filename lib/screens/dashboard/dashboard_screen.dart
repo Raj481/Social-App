@@ -27,36 +27,39 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   int index = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // ColorRes.primaryBlack
-      backgroundColor: Theme.of(context).primaryColor,
-      body: IndexedStack(
-        index: index,
-        children: const [
-          HomeScreen(),
-          ChatListScreen(),
-          SizedBox.shrink(),
-          SearchScreen(),
-          SettingsScreen()
-        ],
-      ),
-      bottomNavigationBar:  BottomNavView(
-        currentIndex: index,
-        onTap: (value ) {
-          if(value == 2) {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (_)=> const AddNewPostScreen()
-                ));
-          } else {
-            setState(() {
-              index = value;
-            });
-           // BlocProvider.of<ThemeBloc>(context).add(ThemeSwitchEvent());
-          }
-        },
-      ),
+    return BlocBuilder<ThemeBloc, ThemeData>(
+        builder: (_, state) {
+          return Scaffold(
+            // ColorRes.primaryBlack
+            backgroundColor: Theme.of(context).primaryColor,
+            body: IndexedStack(
+              index: index,
+              children: const [
+                HomeScreen(),
+                ChatListScreen(),
+                SizedBox.shrink(),
+                SearchScreen(),
+                SettingsScreen()
+              ],
+            ),
+            bottomNavigationBar:  BottomNavView(
+              currentIndex: index,
+              onTap: (value ) {
+                if(value == 2) {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_)=> const AddNewPostScreen()
+                      ));
+                } else {
+                  setState(() {
+                    index = value;
+                  });
+                }
+              },
+            ),
+          );
+        }
     );
   }
 }

@@ -1,7 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:socialapp/widgets/rounded_container_view.dart';
 
+import '../../logic/theme/theme_bloc.dart';
+import '../../logic/theme/theme_event.dart';
 import '../../utils/color_res.dart';
 import '../../utils/font_res.dart';
 import '../../utils/string_res.dart';
@@ -17,6 +20,7 @@ class SettingsScreen extends StatefulWidget {
 class _SettingsScreenState extends State<SettingsScreen> {
 
   final List<String> _list = [
+    "Theme Light",
     "Notifications",
     "Blocked List",
     "Terms and Conditions",
@@ -29,17 +33,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorRes.primaryBlack,
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Column(
         children: [
           CustomAppBarView(
             title: Text(
               StringRes.settings.toUpperCase(),
-              style: TextStyle(
-                  fontFamily: FontRes.ralewaySemiBold,
-                  color: ColorRes.white,
-                  fontSize: 18
-              ),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
           Flexible(
@@ -58,11 +58,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         minHeight: 45
                       ),
                       boxDecoration: BoxDecoration(
-                        color: ColorRes.greyMedium.withOpacity(.1),
+                        color: Theme.of(context).cardColor,
                         borderRadius: BorderRadius.circular(5),
                       ),
                       child: InkWell(
-                        onTap: (){},
+                        onTap: () => onItemTap(index),
                         borderRadius: BorderRadius.circular(5),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
@@ -73,11 +73,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             children: [
                               Text(
                                 _list.elementAt(index).toUpperCase(),
-                                style: TextStyle(
-                                    fontFamily: FontRes.robotoRegular,
-                                    color: ColorRes.white,
-                                    fontSize: 16,
-                                ),
+                                style: Theme.of(context).textTheme.displaySmall,
                               ),
                             ],
                           ),
@@ -90,5 +86,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
         ],
       ),
     );
+  }
+
+  onItemTap(int index){
+    if(index == 0){
+      setState(() {
+        _list[index] = "Theme Light";
+      });
+      BlocProvider.of<ThemeBloc>(context).add(ThemeSwitchEvent());
+    }
   }
 }

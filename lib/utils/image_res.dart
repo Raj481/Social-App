@@ -1,5 +1,15 @@
 
+
+import 'package:flutter/material.dart';
+
 class ImageRes {
+  ImageRes._();
+  static bool isDarkMode = false;
+  static ImageRes instance = ImageRes._();
+  static ImageRes of(BuildContext context) {
+    isDarkMode = Theme.of(context).brightness == Brightness.dark;
+    return instance;
+  }
   static String get image => "assets/images";
   static String get utils => "assets/images/utils";
   static String get icAddBlack => "$image/ic_add_black.png";
@@ -21,6 +31,9 @@ class ImageRes {
   static String get icSearchWhite => "$image/ic_search_white.png";
   static String get icSettingsBlack => "$image/ic_settings_black.png";
   static String get icSettingsWhite => "$image/ic_settings_white.png";
+
+  String get icSettingsSelected => isDarkMode
+      ? "$image/ic_settings_black.png" : "$image/ic_settings_white.png";
   static String get icUserWhite => "$image/ic_user_white.png";
   static String get icUserBlack => "$image/ic_user_black.png";
   static String get icSendBlack => "$image/ic_send_black.png";

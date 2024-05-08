@@ -19,23 +19,19 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorRes.primaryBlack,
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Column(
         children: [
           CustomAppBarView(
             title: Text(
               StringRes.search.toUpperCase(),
-              style: TextStyle(
-                  fontFamily: FontRes.ralewaySemiBold,
-                  color: ColorRes.white,
-                  fontSize: 18
-              ),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
           const SizedBox(height: 15,),
           Row(
             children: [
-              CustomTextField(
+             /* CustomTextField(
                 hintText: "Search",
                 boxDecoration: BoxDecoration(
                   color: ColorRes.white.withOpacity(.1),
@@ -51,11 +47,11 @@ class _SearchScreenState extends State<SearchScreen> {
                     fontFamily: FontRes.robotoRegular,
                     fontSize: 14
                 ),
-              ),
+              ),*/
             ],
           ),
           const SizedBox(height: 15,),
-          SizedBox(
+          /*SizedBox(
             height: 190,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -116,7 +112,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   );
                 }
             ),
-          ),
+          ),*/
           const SizedBox(height: 15,),
         ],
       ),

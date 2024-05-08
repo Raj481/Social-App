@@ -26,7 +26,7 @@ class CustomAppBarView extends StatelessWidget {
           top: 45, bottom: 15
       ),
       decoration: decoration ?? BoxDecoration(
-          color: ColorRes.secondaryBlack.withOpacity(.1)
+          color: Theme.of(context).primaryColor
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
